@@ -297,8 +297,6 @@ A dedicated drillthrough page provides detailed product-level analysis while pre
 
 ![Drillthrough Action](images/06-drillthrough-action.png)
 
-![Product Drillthrough](images/05-product-drillthrough.png)
-
 ## Other Interactive Features
 
 - Page-navigation buttons between Products, Employees, and Customers
