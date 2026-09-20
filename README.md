@@ -156,9 +156,16 @@ The model separates descriptive dimensions from fact-oriented tables:
 
 The model uses one-to-many relationships from dimensions to facts. Multiple date relationships support analysis by order, required, and shipped dates; inactive relationships are activated in measures when an alternative date context is required.
 
+
 ## DAX Measures
 
 The report uses explicit DAX measures for KPIs, filter-context manipulation, time intelligence, ranking, scenario comparison, and operational analysis.
+
+### Calendar table
+
+A dedicated `DimDate` table was created with DAX using the sales date range. It provides date attributes for year, quarter, month, year-month, and day of week, supporting time-intelligence measures such as YTD, previous-period comparisons, cumulative sales, and rolling averages.
+
+![DAX calendar table](images/18-dax-calendar-table.png)
 
 ### Customer Share by Country
 
