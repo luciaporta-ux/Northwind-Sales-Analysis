@@ -291,11 +291,18 @@ SUMX(
 )
 ```
 
-## Interactive Features
+### Product Drillthrough
+
+A dedicated drillthrough page provides detailed product-level analysis while preserving the selected product context.
+
+![Drillthrough Action](images/06-drillthrough-action.png)
+
+![Product Drillthrough](images/05-product-drillthrough.png)
+
+## Other Interactive Features
 
 - Page-navigation buttons between Products, Employees, and Customers
 - Dynamic Top N parameter
-- Product-level drill-through
 - Custom report-page tooltip
 - Year and country slicers
 - Cross-filtering and cross-highlighting
@@ -303,6 +310,7 @@ SUMX(
 - Conditional formatting
 - Category-to-product drill-down
 - Context-aware KPI cards
+
 
 ## Row-Level Security
 
