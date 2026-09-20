@@ -177,6 +177,35 @@ DIVIDE(
 )
 ```
 
+### 3-Month Rolling Average
+
+`RollingAverage3M` calculates the average net sales for the current month and the previous two months, smoothing short-term fluctuations to provide a clearer view of the sales trend.
+
+![3-Month Rolling Average](images/dax-rolling-average.png)
+
+```DAX
+RollingAverage3M =
+VAR CurrentMonth =
+    MAX(DimDate[YearMonth])
+
+VAR Last3Months =
+    TOPN(
+        3,
+        FILTER(
+            ALL(DimDate[YearMonth]),
+            DimDate[YearMonth] <= CurrentMonth
+        ),
+        DimDate[YearMonth],
+        DESC
+    )
+
+RETURN
+    AVERAGEX(
+        Last3Months,
+        CALCULATE([Net Sales])
+    )
+```
+
 ### Dynamic Product Ranking
 
 `ProductRanking` ranks products by net sales in descending order. `ALL(DimProduct[ProductName])` removes the product-name filter while preserving other relevant filters, and `DENSE` avoids gaps between tied positions.
